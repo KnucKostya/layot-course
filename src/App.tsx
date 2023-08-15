@@ -11,6 +11,8 @@ function App() {
                 <Field/>
                 <Field/>
                 <Field/>
+                <Checkbox type={'radio'}/>
+                <Checkbox />
             </Form>
         </div>
     );
@@ -38,3 +40,21 @@ const Field = styled.input`
   width: 100%;
   font-size: 1rem;
 `;
+
+const Checkbox = styled.input.attrs((props)=>({
+    type: props.type || 'checkbox'
+}))`
+    padding: 5px 15px;
+    margin: 10px 0;
+    width: 100%;
+    font-size: 1rem;
+`
+// const Checkbox = styled.input.attrs((props)=> ({
+//     type: props.type || 'checkbox',
+//     title: props.title
+// }))`
+//   padding: 5px 15px;
+//   margin: 10px 0;
+//   width: 100%;
+//   font-size: 1rem;
+// `;
